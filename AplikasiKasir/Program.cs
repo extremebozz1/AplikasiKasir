@@ -16,7 +16,10 @@ namespace AplikasiKasir
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            if (Koneksi.cekKoneksi())
+                Application.Run(new MainMenu());
+            else
+                MessageBox.Show("Gagal Terhubung Dengan Database!", "Error!");
         }
     }
 }
