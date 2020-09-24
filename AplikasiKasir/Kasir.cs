@@ -21,9 +21,10 @@ namespace AplikasiKasir
             InitializeComponent();
             lNamaKasir.Text = "Selamat Datang, " + Koneksi.Session_Username;
             mn = menu;
-            invoice();
         }
 
+        public void pencarian(object kode) { tKode.Text = kode.ToString(); }
+            
         private void invoice()
         {
             int invoice;
@@ -46,9 +47,7 @@ namespace AplikasiKasir
             string idInvoice = "" + jAngka;
 
             for (int i = 0; i < angka; i++)
-            {
                 idInvoice = idInvoice.Insert(0, "0");
-            }
 
             string invoices = DateTime.Now.ToString("y''MM''dd") + idInvoice;
 
@@ -59,11 +58,16 @@ namespace AplikasiKasir
         {
             if (e.Alt && e.KeyCode == Keys.C || e.KeyCode == Keys.F12)
                 Logout(mn);
+            if (e.KeyCode == Keys.F2)
+                button2_Click(sender, e);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) { Logout(mn); }
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            Logout(mn);
+            PencarianProduk pp = new PencarianProduk(this);
+            pp.Show();
         }
     }
 }
