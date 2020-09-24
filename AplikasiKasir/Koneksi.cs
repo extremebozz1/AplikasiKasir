@@ -20,51 +20,18 @@ namespace AplikasiKasir
             bool berhasil = true;
             try
             {
-                var con = new MySqlConnection("Server=localhost;Database=appkasir;Uid=root;Pwd=");
+                var con = new MySqlConnection("Server=localhost;Database=aplikasikasir;Uid=root;Pwd=");
                 con.Open();
                 if (con.State == System.Data.ConnectionState.Open)
                     berhasil = true;
                 con.Close();
                 return berhasil;
-            } 
-            catch 
-            {
-                berhasil = false;
-                MessageBox.Show("Gagal Terhubung Dengan Database!", "Error!");
-                if (!berhasil)
-                {
-                    string lokasi;
-
-                    FolderBrowserDialog browserdialog = new FolderBrowserDialog();
-
-                    DialogResult result = browserdialog.ShowDialog();
-
-                    if (result == DialogResult.OK)
-                    {
-                        lokasi = Path.Combine(browserdialog.SelectedPath, @"mysql\data\appkasir");
-                        string lokasifolder = @"aplikasikasir";
-
-                        if (Directory.Exists(lokasifolder))
-                        {
-                            Directory.CreateDirectory(lokasi);
-
-                            string[] files = Directory.GetFiles(lokasifolder);
-                            string fileName, destFile;
-
-                            foreach (string s in files)
-                            {
-                                fileName = Path.GetFileName(s);
-                                destFile = Path.Combine(lokasi, fileName);
-                                File.Copy(s, destFile, false);
-                            }
-
-                            berhasil = cekKoneksi();
-                        }
-                        else
-                            MessageBox.Show("Source path does not exist!");
-                    }
-                }
             }
+            catch
+            {
+                MessageBox.Show("Periksa Kembali Database Anda!", "Error");
+            }
+                
             return berhasil;
         }
 

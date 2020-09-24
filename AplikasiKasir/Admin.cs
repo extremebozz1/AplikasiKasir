@@ -12,10 +12,12 @@ namespace AplikasiKasir
 {
     public partial class Admin : Form
     {
-        public Admin()
+        MainMenu menu;
+        public Admin(MainMenu mn)
         {
             InitializeComponent();
             lNama.Text = "Selamat Datang, " + Koneksi.Session_Username;
+            menu = mn;
         }
     }
 }

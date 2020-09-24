@@ -39,20 +39,18 @@ namespace AplikasiKasir
                 if (read.HasRows)
                 {
                     read.Read();
-                    MessageBox.Show("Login Berhasil!", "Berhasil");
                     Koneksi.Session_Username = read["nama_user"].ToString();
                     switch (read["jabatan"])
                     {
                         case "admin":
-                            mn.openChildForm(new Admin());
+                            mn.openChildForm(new Admin(mn));
                             break;
 
                         case "user":
-                            mn.openChildForm(new Kasir());
+                            mn.openChildForm(new Kasir(mn));
                             break;
                     }
                     con.Close();
-                    //this.Close();
                 }
                 else
                 {

@@ -53,6 +53,7 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Function.cs" />
     <Compile Include="Kasir.cs">
       <SubType>Form</SubType>
     </Compile>

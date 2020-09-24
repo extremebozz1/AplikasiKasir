@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AplikasiKasir.Function;
 
 namespace AplikasiKasir
 {
@@ -16,15 +17,18 @@ namespace AplikasiKasir
         public MainMenu()
         {
             InitializeComponent();
-            this.MaximizeBox = false;
+            //this.MaximizeBox = false;
             cekSession();
             this.BringToFront();
         }
 
-        private void cekSession()
+        public void cekSession()
         {
+            Login lg = new Login(this);
+            if (lg.IsDisposed == true)
+                lg = new Login(this);
             if (Koneksi.Session_Username.Equals(""))
-                openChildForm(new Login(this));
+                openChildForm(lg);
         }
 
         public void openChildForm(Form childForm)
@@ -32,6 +36,7 @@ namespace AplikasiKasir
             if (activeForm != null)
                 activeForm.Close();
 
+            Text = childForm.Text + " ( " + Koneksi.Session_Username + " )";
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -42,11 +47,12 @@ namespace AplikasiKasir
             childForm.Show();
         }
 
-        private void openChildForm(Login childForm)
+        public void openChildForm(Login childForm)
         {
             if (activeForm != null)
                 activeForm.Close();
 
+            Text = "Login Page";
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
