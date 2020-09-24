@@ -26,6 +26,7 @@ namespace AplikasiKasir
         {
             InitializeComponent();
             mn = mm;
+            //Ini edit dari laptop silvina
         }
 
         private void button1_Click(object sender, EventArgs e)
