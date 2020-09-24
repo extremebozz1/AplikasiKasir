@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace AplikasiKasir
 {
-    public partial class Kasir : Form
+    public partial class Admin : Form
     {
-        public Kasir()
+        public Admin()
         {
             InitializeComponent();
-            lNamaKasir.Text = "Selamat Datang, " + Koneksi.Session_Username;
+            lNama.Text = "Selamat Datang, " + Koneksi.Session_Username;
         }
     }
 }

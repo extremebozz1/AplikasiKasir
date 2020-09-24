@@ -1,6 +1,6 @@
 ﻿namespace AplikasiKasir
 {
-    partial class MainMenu
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pChild = new System.Windows.Forms.Panel();
+            this.lNama = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // pChild
+            // lNama
             // 
-            this.pChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pChild.Location = new System.Drawing.Point(0, 0);
-            this.pChild.Name = "pChild";
-            this.pChild.Size = new System.Drawing.Size(800, 450);
-            this.pChild.TabIndex = 0;
+            this.lNama.AutoSize = true;
+            this.lNama.Location = new System.Drawing.Point(416, 81);
+            this.lNama.Name = "lNama";
+            this.lNama.Size = new System.Drawing.Size(35, 13);
+            this.lNama.TabIndex = 0;
+            this.lNama.Text = "label1";
             // 
-            // MainMenu
+            // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pChild);
-            this.Name = "MainMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main Menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Activated += new System.EventHandler(this.MainMenu_Activated);
+            this.Controls.Add(this.lNama);
+            this.Name = "Admin";
+            this.Text = "Admin";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel pChild;
+        private System.Windows.Forms.Label lNama;
     }
 }
-
