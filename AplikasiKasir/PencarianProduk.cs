@@ -25,16 +25,24 @@ namespace AplikasiKasir
 
         private void ambilData()
         {
-            MySqlConnection con = Koneksi.koneksi();
-            MySqlCommand cmd = new MySqlCommand("SELECT kode_produk, nama_produk FROM data_produk", con);
-            MySqlDataReader read = cmd.ExecuteReader();
+            try
+            {
+                MySqlConnection con = Koneksi.koneksi();
+                MySqlCommand cmd = new MySqlCommand("SELECT kode_produk, nama_produk FROM data_produk", con);
+                MySqlDataReader read = cmd.ExecuteReader();
 
-            while (read.Read())
-                testProduk.Add(read["nama_produk"], read["kode_produk"]);
+                while (read.Read())
+                    testProduk.Add(read["nama_produk"], read["kode_produk"]);
 
-            cbProduk.DataSource = new BindingSource(testProduk, null);
-            cbProduk.DisplayMember = "Key";
-            cbProduk.ValueMember = "Value";
+                cbProduk.DataSource = new BindingSource(testProduk, null);
+                cbProduk.DisplayMember = "Key";
+                cbProduk.ValueMember = "Value";
+            }
+            catch
+            {
+                MessageBox.Show("Tidak Ada Produk Yang Terdaftar Dalam Sistem!", "Tidak Ada Data");
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

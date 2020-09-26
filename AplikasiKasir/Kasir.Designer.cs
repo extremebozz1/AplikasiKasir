@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pKanan = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudDiskon = new System.Windows.Forms.NumericUpDown();
+            this.nudQty = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
             this.tKode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,23 +42,24 @@
             this.lNamaKasir = new System.Windows.Forms.Label();
             this.pAtas = new System.Windows.Forms.Panel();
             this.pChildAtas = new System.Windows.Forms.Panel();
-            this.lHarga = new System.Windows.Forms.Label();
             this.lTotal = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lInvoice = new System.Windows.Forms.Label();
             this.pBawah = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pMenu = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pMenu = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.pKanan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiskon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             this.pAtas.SuspendLayout();
             this.pChildAtas.SuspendLayout();
             this.pBawah.SuspendLayout();
@@ -66,8 +70,8 @@
             // pKanan
             // 
             this.pKanan.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pKanan.Controls.Add(this.numericUpDown2);
-            this.pKanan.Controls.Add(this.numericUpDown1);
+            this.pKanan.Controls.Add(this.nudDiskon);
+            this.pKanan.Controls.Add(this.nudQty);
             this.pKanan.Controls.Add(this.button3);
             this.pKanan.Controls.Add(this.tKode);
             this.pKanan.Controls.Add(this.label3);
@@ -80,35 +84,35 @@
             this.pKanan.Size = new System.Drawing.Size(425, 491);
             this.pKanan.TabIndex = 0;
             // 
-            // numericUpDown2
+            // nudDiskon
             // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(45, 335);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(343, 32);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            this.nudDiskon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudDiskon.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudDiskon.Location = new System.Drawing.Point(45, 335);
+            this.nudDiskon.Name = "nudDiskon";
+            this.nudDiskon.Size = new System.Drawing.Size(343, 32);
+            this.nudDiskon.TabIndex = 2;
+            this.nudDiskon.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
-            // numericUpDown1
+            // nudQty
             // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(45, 245);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudQty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQty.Location = new System.Drawing.Point(45, 245);
+            this.nudQty.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(343, 32);
-            this.numericUpDown1.TabIndex = 1;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.nudQty.Name = "nudQty";
+            this.nudQty.Size = new System.Drawing.Size(343, 32);
+            this.nudQty.TabIndex = 1;
+            this.nudQty.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            this.nudQty.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
             // button3
             // 
@@ -120,6 +124,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "Tambah";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             this.button3.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             // 
             // tKode
@@ -190,8 +195,8 @@
             // pChildAtas
             // 
             this.pChildAtas.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pChildAtas.Controls.Add(this.lHarga);
             this.pChildAtas.Controls.Add(this.lTotal);
+            this.pChildAtas.Controls.Add(this.label4);
             this.pChildAtas.Controls.Add(this.lInvoice);
             this.pChildAtas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pChildAtas.Location = new System.Drawing.Point(30, 30);
@@ -199,29 +204,29 @@
             this.pChildAtas.Size = new System.Drawing.Size(699, 140);
             this.pChildAtas.TabIndex = 5;
             // 
-            // lHarga
-            // 
-            this.lHarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lHarga.Location = new System.Drawing.Point(0, 70);
-            this.lHarga.Name = "lHarga";
-            this.lHarga.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lHarga.Size = new System.Drawing.Size(699, 70);
-            this.lHarga.TabIndex = 2;
-            this.lHarga.Text = "0";
-            this.lHarga.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lTotal
             // 
-            this.lTotal.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTotal.Location = new System.Drawing.Point(0, 40);
+            this.lTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTotal.Location = new System.Drawing.Point(0, 70);
             this.lTotal.Name = "lTotal";
-            this.lTotal.Padding = new System.Windows.Forms.Padding(30, 10, 0, 0);
-            this.lTotal.Size = new System.Drawing.Size(699, 30);
-            this.lTotal.TabIndex = 3;
-            this.lTotal.Text = "Total";
-            this.lTotal.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lTotal.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.lTotal.Size = new System.Drawing.Size(699, 70);
+            this.lTotal.TabIndex = 2;
+            this.lTotal.Text = "0";
+            this.lTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 40);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(30, 10, 0, 0);
+            this.label4.Size = new System.Drawing.Size(699, 30);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Total";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lInvoice
             // 
@@ -255,6 +260,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -270,42 +283,6 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.TabStop = false;
             this.dataGridView1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Kode Produk";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nama Produk";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Harga";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Qty";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Diskon";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Total";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // button1
             // 
@@ -323,6 +300,7 @@
             // 
             // pMenu
             // 
+            this.pMenu.Controls.Add(this.button4);
             this.pMenu.Controls.Add(this.button2);
             this.pMenu.Controls.Add(this.button1);
             this.pMenu.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -332,10 +310,23 @@
             this.pMenu.Size = new System.Drawing.Size(1184, 70);
             this.pMenu.TabIndex = 6;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(110, 10);
+            this.button4.Margin = new System.Windows.Forms.Padding(10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(80, 50);
+            this.button4.TabIndex = 7;
+            this.button4.TabStop = false;
+            this.button4.Text = "Pembayaran\r\n( F3 )";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(10, 10);
             this.button2.Margin = new System.Windows.Forms.Padding(10);
@@ -343,10 +334,53 @@
             this.button2.Size = new System.Drawing.Size(80, 50);
             this.button2.TabIndex = 7;
             this.button2.TabStop = false;
-            this.button2.Text = "Pencarian\n( F2 )";
+            this.button2.Text = "Pencarian\r\n( F2 )";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             this.button2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Kode Produk";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 170F;
+            this.Column2.HeaderText = "Nama Produk";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column3.HeaderText = "Harga";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 40F;
+            this.Column4.HeaderText = "Qty";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 40F;
+            this.Column5.HeaderText = "Diskon";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.Column6.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column6.HeaderText = "Total";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Kasir
             // 
@@ -362,8 +396,8 @@
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyDown);
             this.pKanan.ResumeLayout(false);
             this.pKanan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDiskon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQty)).EndInit();
             this.pAtas.ResumeLayout(false);
             this.pChildAtas.ResumeLayout(false);
             this.pBawah.ResumeLayout(false);
@@ -379,18 +413,12 @@
         private System.Windows.Forms.Panel pAtas;
         private System.Windows.Forms.Label lNamaKasir;
         private System.Windows.Forms.Panel pBawah;
-        private System.Windows.Forms.Label lHarga;
+        private System.Windows.Forms.Label lTotal;
         private System.Windows.Forms.Panel pChildAtas;
         private System.Windows.Forms.Label lInvoice;
-        private System.Windows.Forms.Label lTotal;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Panel pMenu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -398,7 +426,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown nudQty;
+        private System.Windows.Forms.NumericUpDown nudDiskon;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }
