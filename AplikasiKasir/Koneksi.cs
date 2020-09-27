@@ -17,7 +17,7 @@ namespace AplikasiKasir
 
         public static bool cekKoneksi()
         {
-            bool berhasil = true;
+            bool berhasil = false;
             try
             {
                 var con = new MySqlConnection("Server=localhost;Database=aplikasikasir;Uid=root;Pwd=");
