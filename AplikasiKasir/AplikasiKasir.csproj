@@ -55,6 +55,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataUser.Designer.cs">
+      <DependentUpon>DataUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Kasir.cs">
       <SubType>Form</SubType>
@@ -92,6 +98,9 @@
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataUser.resx">
+      <DependentUpon>DataUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kasir.resx">
       <DependentUpon>Kasir.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pembayaran.resx">
+      <DependentUpon>Pembayaran.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PencarianProduk.resx">
       <DependentUpon>PencarianProduk.cs</DependentUpon>
